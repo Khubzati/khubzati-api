@@ -1,12 +1,20 @@
-const { dbHost, dbName, dbPassword, dbPort, dbUsername } = require('./config');
+const { dbUrl } = require('./config');
 
 const defaultConfig = {
-  database: dbName,
+  url: dbUrl,
   dialect: 'postgres',
-  host: dbHost,
-  password: dbPassword,
-  port: dbPort,
-  username: dbUsername,
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false
+    }
+  },
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
+  },
   seederStorage: 'sequelize',
   timestamps: true,
   underscored: true,

@@ -41,10 +41,10 @@ app.get("/", (req, res) => {
     const data = {
       version: "1.0.0"
     };
-    
+
     // Create response with serializable data
     const response = createApiResponse(
-      "Welcome to Khubzati API!", 
+      "Welcome to Khubzati API!",
       "!أهلاً وسهلاً بكم في واجهة برمجة تطبيقات خبزتي",
       data,
       true
