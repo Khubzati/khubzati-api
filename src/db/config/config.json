@@ -1,0 +1,28 @@
+{
+  "development": {
+    "username": "db_user",
+    "password": "db_password",
+    "database": "khubzati_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": false
+  },
+  "test": {
+    "username": "db_user",
+    "password": "db_password",
+    "database": "khubzati_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": false
+  },
+  "production": {
+    "username": "db_user_prod",
+    "password": "db_password_prod",
+    "database": "khubzati_prod",
+    "host": "production_db_host",
+    "dialect": "postgres",
+    "logging": false,
+    "use_env_variable": "DATABASE_URL" 
+  }
+}
+
