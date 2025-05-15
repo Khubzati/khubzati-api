@@ -1,28 +1,35 @@
 {
   "development": {
-    "username": "db_user",
-    "password": "db_password",
-    "database": "khubzati_dev",
-    "host": "127.0.0.1",
+    "use_env_variable": "DATABASE_URL",
+    "url": "DATABASE_URL",
     "dialect": "postgres",
-    "logging": false
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   },
   "test": {
-    "username": "db_user",
-    "password": "db_password",
-    "database": "khubzati_test",
-    "host": "127.0.0.1",
+    "use_env_variable": "DATABASE_URL",
+    "url": "DATABASE_URL",
     "dialect": "postgres",
-    "logging": false
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   },
   "production": {
-    "username": "db_user_prod",
-    "password": "db_password_prod",
-    "database": "khubzati_prod",
-    "host": "production_db_host",
+    "use_env_variable": "DATABASE_URL",
+    "url": "DATABASE_URL",
     "dialect": "postgres",
-    "logging": false,
-    "use_env_variable": "DATABASE_URL" 
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
-
